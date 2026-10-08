@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fragino | Natural Hair Oil</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f8f5ee;
+            color: #26352b;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 80px;
+            padding: 0 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: #f8f5ee;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: "DM Serif Display", serif;
+            font-size: 32px;
+            color: #26352b;
+        }
+
+        .logo span,
+        .footer-logo span {
+            color: #a47c45;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        .navbar nav a {
+            font-size: 14px;
+            color: #536057;
+            transition: 0.3s;
+        }
+
+        .navbar nav a:hover {
+            color: #a47c45;
+        }
+
+        .nav-btn {
+            background: #26352b;
+            color: white;
+            padding: 12px 23px;
+            border-radius: 30px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #a47c45;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .primary-btn {
+            display: inline-block;
+            background: #26352b;
+            color: white;
+
+            padding: 15px 30px;
+            border-radius: 30px;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .primary-btn:hover {
+            background: #a47c45;
+            transform: translateY(-3px);
+        }
+
+        .secondary-btn {
+            display: inline-block;
+            margin-left: 15px;
+
+            color: #26352b;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .secondary-btn:hover {
+            color: #a47c45;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: calc(100vh - 80px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            width: 52%;
+            z-index: 2;
+        }
+
+        .small-title {
+            color: #a47c45;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: "DM Serif Display", serif;
+            font-size: clamp(55px, 7vw, 95px);
+            line-height: 0.95;
+            font-weight: 400;
+        }
+
+        .hero h1 span,
+        .section-heading span,
+        .ingredient-content h2 span,
+        .cta h2 span {
+            color: #a47c45;
+        }
+
+        .hero-text {
+            max-width: 500px;
+            margin: 30px 0;
+
+            color: #68736c;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .hero-buttons {
+            margin-bottom: 50px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 45px;
+        }
+
+        .hero-stats div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-stats strong {
+            font-family: "DM Serif Display", serif;
+            font-size: 25px;
+        }
+
+        .hero-stats small {
+            color: #7b857e;
+            font-size: 11px;
+            margin-top: 3px;
+        }
+
+
+        /* =========================
+           PRODUCT BOTTLE
+        ========================= */
+
+        .hero-product {
+            width: 43%;
+            height: 600px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+        }
+
+        .glow {
+            position: absolute;
+
+            width: 470px;
+            height: 470px;
+
+            border-radius: 50%;
+
+            background: #e8ddc8;
+        }
+
+        .bottle {
+            width: 210px;
+            height: 420px;
+
+            position: relative;
+            z-index: 2;
+
+            filter: drop-shadow(20px 25px 25px rgba(0, 0, 0, 0.18));
+        }
+
+        .cap {
+            width: 70px;
+            height: 65px;
+
+            margin: auto;
+
+            background: #292d28;
+
+            border-radius: 7px 7px 3px 3px;
+        }
+
+        .bottle-body {
+            width: 190px;
+            height: 345px;
+
+            margin: -2px auto 0;
+
+            border-radius: 20px 20px 38px 38px;
+
+            background: linear-gradient(
+                90deg,
+                #6c4022,
+                #a66b39,
+                #7a4725
+            );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:
+                inset 10px 0 15px rgba(255,255,255,.08),
+                inset -10px 0 20px rgba(0,0,0,.12);
+        }
+
+        .label {
+            width: 145px;
+            height: 190px;
+
+            background: #eee6d5;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            padding-top: 25px;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(0,0,0,.12);
+        }
+
+        .label-brand {
+            font-family: "DM Serif Display", serif;
+            font-size: 20px;
+        }
+
+        .label-line {
+            width: 45px;
+            height: 1px;
+
+            background: #a47c45;
+
+            margin: 12px 0;
+        }
+
+        .label p {
+            font-size: 9px;
+            letter-spacing: 3px;
+        }
+
+        .label h3 {
+            font-family: "DM Serif Display", serif;
+            font-size: 32px;
+            font-weight: 400;
+            color: #a47c45;
+        }
+
+        .label small {
+            font-size: 7px;
+            letter-spacing: 2px;
+            margin-top: 12px;
+        }
+
+
+        /* =========================
+           SECTION HEADING
+        ========================= */
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 65px;
+        }
+
+        .section-heading > p {
+            color: #a47c45;
+            font-size: 11px;
+            letter-spacing: 3px;
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+        .section-heading h2 {
+            font-family: "DM Serif Display", serif;
+            font-size: clamp(42px, 5vw, 65px);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefits {
+            background: #26352b;
+            color: white;
+        }
+
+        .benefits .section-heading > p {
+            color: #c8a676;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .benefit-card {
+            padding: 45px 35px;
+
+            border: 1px solid rgba(255,255,255,.12);
+
+            transition: 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            border-color: #c8a676;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #35483a;
+            color: #c8a676;
+
+            font-size: 23px;
+
+            margin-bottom: 30px;
+        }
+
+        .benefit-card h3 {
+            font-family: "DM Serif Display", serif;
+            font-size: 28px;
+            font-weight: 400;
+
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: #bdc5bf;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           INGREDIENTS
+        ========================= */
+
+        .ingredients {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .ingredient-image {
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #e8ddc8;
+        }
+
+        .ingredient-circle {
+            width: 320px;
+            height: 320px;
+
+            border-radius: 50%;
+
+            background: #d5c6a8;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 100px;
+        }
+
+        .ingredient-content h2 {
+            font-family: "DM Serif Display", serif;
+            font-size: clamp(42px, 5vw, 65px);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .ingredient-content > p:not(.small-title) {
+            color: #69746c;
+            line-height: 1.8;
+            font-size: 14px;
+
+            margin: 25px 0 35px;
+
+            max-width: 480px;
+        }
+
+        .ingredient-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ingredient-list div {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .ingredient-list span {
+            font-family: "DM Serif Display", serif;
+            font-size: 20px;
+            color: #a47c45;
+        }
+
+        .ingredient-list p {
+            font-size: 13px;
+            color: #69746c;
+        }
+
+        .ingredient-list strong {
+            color: #26352b;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           HOW TO USE
+        ========================= */
+
+        .how-to {
+            background: #eee9df;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .step-number {
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 25px;
+
+            border-radius: 50%;
+
+            background: #26352b;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: "DM Serif Display", serif;
+            font-size: 20px;
+        }
+
+        .step h3 {
+            font-family: "DM Serif Display", serif;
+            font-size: 27px;
+            font-weight: 400;
+
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: #707970;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           REVIEWS
+        ========================= */
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            padding: 35px;
+            background: white;
+
+            box-shadow: 0 10px 35px rgba(0,0,0,.04);
+        }
+
+        .stars {
+            color: #b78b4f;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .review-card p {
+            color: #68736c;
+            line-height: 1.8;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .review-card h4 {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: #d9cdb7;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: "DM Serif Display", serif;
+            font-size: clamp(45px, 6vw, 75px);
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        .cta > div > p:not(.small-title) {
+            color: #657067;
+            line-height: 1.8;
+            margin: 25px 0 30px;
+        }
+
+        .cta .primary-btn {
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #1e2922;
+            color: white;
+
+            text-align: center;
+
+            padding: 60px 8%;
+        }
+
+        .footer-logo {
+            font-family: "DM Serif Display", serif;
+            font-size: 34px;
+        }
+
+        footer > p {
+            color: #9ca69f;
+            font-size: 12px;
+            margin: 15px 0 25px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .socials a {
+            color: #c6cec8;
+            font-size: 12px;
+        }
+
+        .socials a:hover {
+            color: #c8a676;
+        }
+
+        .copyright {
+            color: #69746c;
+            font-size: 10px;
+            margin-top: 40px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            section {
+                padding: 80px 6%;
+            }
+
+            .navbar {
+                padding: 0 6%;
+            }
+
+            .navbar nav {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 70px;
+            }
+
+            .hero-content {
+                width: 100%;
+            }
+
+            .hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-product {
+                width: 100%;
+                height: 500px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .benefit-grid,
+            .steps,
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ingredients {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .ingredient-image {
+                min-height: 400px;
+            }
+
+            .ingredient-content {
+                text-align: center;
+            }
+
+            .ingredient-content > p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .ingredient-list {
+                max-width: 400px;
+                margin: auto;
+                text-align: left;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .navbar {
+                height: 70px;
+            }
+
+            .logo {
+                font-size: 27px;
+            }
+
+            .nav-btn {
+                padding: 10px 17px;
+            }
+
+            .hero h1 {
+                font-size: 53px;
+            }
+
+            .hero-text {
+                font-size: 13px;
+            }
+
+            .secondary-btn {
+                display: block;
+                margin: 20px 0 0;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .hero-stats strong {
+                font-size: 20px;
+            }
+
+            .hero-product {
+                height: 430px;
+            }
+
+            .glow {
+                width: 330px;
+                height: 330px;
+            }
+
+            .bottle {
+                transform: scale(.8);
+            }
+
+            .benefit-card {
+                padding: 35px 25px;
+            }
+
+            .ingredient-circle {
+                width: 240px;
+                height: 240px;
+                font-size: 75px;
+            }
+
+            .ingredient-image {
+                min-height: 330px;
+            }
+
+            .socials {
+                gap: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Fragino<span>.</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#ingredients">Ingredients</a>
+            <a href="#reviews">Reviews</a>
+        </nav>
+
+        <a href="#order" class="nav-btn">
+            Shop Now
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                NATURAL HAIR CARE
+            </p>
+
+            <h1>
+                Healthy Hair
+                <br>
+                <span>Starts Naturally.</span>
+            </h1>
+
+            <p class="hero-text">
+                Discover Fragino Hair Oil — a nourishing blend
+                created to help strengthen, moisturize and revive
+                your hair from root to tip.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#order" class="primary-btn">
+                    Shop Fragino
+                </a>
+
+                <a href="#benefits" class="secondary-btn">
+                    Explore More →
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>100%</strong>
+                    <small>Natural Care</small>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <small>Hair Nourishment</small>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <small>Healthy Shine</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT -->
+
+        <div class="hero-product">
+
+            <div class="glow"></div>
+
+            <div class="bottle">
+
+                <div class="cap"></div>
+
+                <div class="bottle-body">
+
+                    <div class="label">
+
+                        <div class="label-brand">
+                            FRAGINO
+                        </div>
+
+                        <div class="label-line"></div>
+
+                        <p>HAIR</p>
+
+                        <h3>OIL</h3>
+
+                        <small>
+                            NATURAL<br>
+                            HAIR CARE
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BENEFITS ================= -->
+
+    <section class="benefits" id="benefits">
+
+        <div class="section-heading">
+
+            <p>WHY FRAGINO?</p>
+
+            <h2>
+                Give Your Hair
+                <br>
+                <span>The Care It Deserves.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="benefit-grid">
+
+            <div class="benefit-card">
+
+                <div class="icon">✦</div>
+
+                <h3>
+                    Strengthens Hair
+                </h3>
+
+                <p>
+                    Nourishes your scalp and helps improve
+                    the appearance of weak and damaged hair.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="icon">❋</div>
+
+                <h3>
+                    Deep Nourishment
+                </h3>
+
+                <p>
+                    A rich oil blend that helps keep your
+                    hair soft, moisturized and healthy-looking.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="icon">♡</div>
+
+                <h3>
+                    Natural Shine
+                </h3>
+
+                <p>
+                    Bring back a beautiful natural-looking
+                    shine without making your hair feel heavy.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INGREDIENTS ================= -->
+
+    <section class="ingredients" id="ingredients">
+
+        <div class="ingredient-image">
+
+            <div class="ingredient-circle">
+                🌿
+            </div>
+
+        </div>
+
+
+        <div class="ingredient-content">
+
+            <p class="small-title">
+                PURE INGREDIENTS
+            </p>
+
+            <h2>
+                Nature's Goodness
+                <br>
+                <span>In Every Drop.</span>
+            </h2>
+
+            <p>
+                Fragino combines carefully selected nourishing
+                ingredients to create a simple and effective
+                hair-care ritual.
+            </p>
+
+
+            <div class="ingredient-list">
+
+                <div>
+
+                    <span>01</span>
+
+                    <p>
+                        <strong>Coconut Oil</strong>
+                        <br>
+                        For deep nourishment
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>02</span>
+
+                    <p>
+                        <strong>Argan Oil</strong>
+                        <br>
+                        For softness & shine
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>03</span>
+
+                    <p>
+                        <strong>Herbal Extracts</strong>
+                        <br>
+                        For healthy-looking hair
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW TO USE ================= -->
+
+    <section class="how-to">
+
+        <div class="section-heading">
+
+            <p>SIMPLE ROUTINE</p>
+
+            <h2>
+                Beautiful Hair
+                <br>
+                <span>In 3 Easy Steps.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Apply
+                </h3>
+
+                <p>
+                    Apply a small amount of Fragino Hair Oil
+                    directly to your scalp and hair.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Massage
+                </h3>
+
+                <p>
+                    Gently massage your scalp for a few minutes
+                    to distribute the oil evenly.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Relax
+                </h3>
+
+                <p>
+                    Leave it on and let your hair enjoy
+                    the nourishing care of Fragino.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= REVIEWS ================= -->
+
+    <section class="reviews" id="reviews">
+
+        <div class="section-heading">
+
+            <p>OUR CUSTOMERS</p>
+
+            <h2>
+                Loved By
+                <br>
+                <span>Hair-Care Lovers.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="review-grid">
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Fragino has become a part of my weekly
+                    hair-care routine. My hair feels much softer
+                    and looks healthier."
+                </p>
+
+                <h4>
+                    — Ayesha K.
+                </h4>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "I love the lightweight feel. It leaves my
+                    hair looking shiny without feeling too oily."
+                </p>
+
+                <h4>
+                    — Sarah M.
+                </h4>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Beautiful packaging and a lovely hair-oil
+                    experience. Definitely ordering again!"
+                </p>
+
+                <h4>
+                    — Hira A.
+                </h4>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta" id="order">
+
+        <div>
+
+            <p class="small-title">
+                YOUR HAIR DESERVES BETTER
+            </p>
+
+            <h2>
+                Make Fragino
+                <br>
+                <span>Part of Your Ritual.</span>
+            </h2>
+
+            <p>
+                Nourish. Strengthen. Shine.
+                <br>
+                One drop at a time.
+            </p>
+
+            <a href="#" class="primary-btn">
+                Order Now →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Fragino<span>.</span>
+        </div>
+
+        <p>
+            Natural care for beautiful,
+            healthy-looking hair.
+        </p>
+
+        <div class="socials">
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                TikTok
+            </a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Fragino. All Rights Reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
